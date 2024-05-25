@@ -48,10 +48,21 @@ let categories=[
 categories.map((e) => {
     var image = document.createElement("img");
     image.src = e.imgSrc;
+    let box = document.createElement("div");
+
+    if(e.tittle=="Fashion"){
+    var link=document.createElement("a");
+    link.href="product.html";
+    link.append(image);
+    box.append(link);
+}
+else{
+    box.append(image);
+}
     let title = document.createElement("p");
     title.innerHTML = e.tittle;
-    let box = document.createElement("div");
-    box.append(image, title); // Changed from image to anchor here
+   
+    box.append(title); // Changed from image to anchor here
     document.getElementById("categories").append(box);
     console.log(box);
 })
