@@ -56,6 +56,12 @@ categories.map((e) => {
     link.append(image);
     box.append(link);
 }
+else if(e.tittle=="Electronics"){
+    var link=document.createElement("a");
+    link.href="electronics.html";
+    link.append(image);
+    box.append(link);
+}
 else{
     box.append(image);
 }
