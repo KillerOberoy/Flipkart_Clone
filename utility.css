@@ -1,0 +1,12 @@
+.sizeFont{
+    font-family: sans-serif;
+    font-size: 17px;
+    padding: 0px 5px;
+
+}
+
+.align{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}

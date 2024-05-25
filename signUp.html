@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signUp.css" />
+    <title>signUp</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="left">
+        <p id="login" class="margin">SignUp</p>
+        <p id="getAccess" class="font margin">access to your Orders,</p>
+        <p id="wishlist" class="font margin">Wishlist and Recommendations</p>
+        <span>
+          <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png" alt="" id="image"/>
+        </span>
+      </div>
+
+      <div class="right">
+        <div id="inputBoxes">
+          <input type="text" placeholder="Enter Username" id="txtUsername"/>
+          <input type="text" placeholder="Enter Mobile" id="txtMobile"/>
+          <input type="password" placeholder="Enter Password" id="txtPassword"/>
+        </div>
+        <p style="margin:0px 30px ;font-size: 13px; color:#8F8DAE ;">By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
+        <input type="button" value="Sign Up" class="btn" id="btn" onclick="signUp()">
+        <p id="footer" onclick="window.location.href='login.html'" style="cursor: pointer;">Allready have account ? Click to log in</p>
+      </div>
+      
+    </div>
+
+    <script src="signUp.js"></script>
+  </body>
+</html>

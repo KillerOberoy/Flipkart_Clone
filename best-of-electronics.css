@@ -1,0 +1,102 @@
+/* #bestOfElectronics {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 10px 0px 10px;
+  background-color: white;
+}
+
+#bestOfElectronics img {
+  height: 150px;
+
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.bestOfElectronicsInnerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productsMainContainer {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+} */
+
+#bestOfElectronics {
+    display: flex;
+    margin: 20px 10px 0px 10px;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: white;
+    height: 300px;
+  }
+  
+  #bestOfElectronics img {
+    height: 150px;
+    padding: 30px;
+  }
+/* --------------------Beauty , Food , Toys and More---------------------- */
+
+#beautyFoodToysAndMore {
+  display: flex;
+  margin: 20px 10px 0px 10px;
+  /* border: 1px solid red; */
+  justify-content: space-around;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: white;
+  height: 300px;
+}
+
+#beautyFoodToysAndMore img {
+  height: 150px;
+  padding: 30px;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid yellow; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px;
+  height: 90%;
+  width: 230px;
+  /* margin: 0px 10px; */
+}
+
+.innerData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+}
+
+/* -----------------------Pick Your Styles-------------------------- */
+#pickYourStyle {
+  display: flex;
+  margin: 20px 10px 0px 10px;
+  /* border: 1px solid red; */
+  justify-content: space-around;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: white;
+  height: 300px;
+}
+
+#pickYourStyle img {
+  height: 150px;
+  padding: 30px;
+}
