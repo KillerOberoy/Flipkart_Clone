@@ -6,7 +6,7 @@ var mobile = {
       description:
         "The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.",
       category: "mobile-accessories",
-      price: 549.99,
+      price: 8549.99,
       discountPercentage: 11.7,
       rating: 3.11,
       stock: 7,
@@ -65,8 +65,8 @@ var mobile = {
       description:
         "The Apple iPhone Charger is a high-quality charger designed for fast and efficient charging of your iPhone. Ensure your device stays powered up and ready to go.",
       category: "mobile-accessories",
-      price: 19.99,
-      discountPercentage: 1.01,
+      price: 3319.99,
+      discountPercentage: 12.01,
       rating: 3.03,
       stock: 4,
       tags: ["electronics", "chargers"],
@@ -125,7 +125,7 @@ var mobile = {
       description:
         "The Apple MagSafe Battery Pack is a portable and convenient way to add extra battery life to your MagSafe-compatible iPhone. Attach it magnetically for a secure connection.",
       category: "mobile-accessories",
-      price: 99.99,
+      price: 2299.99,
       discountPercentage: 10.27,
       rating: 2.61,
       stock: 80,
@@ -185,7 +185,7 @@ var mobile = {
       description:
         "The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience. With magnetic earbuds and up to 12 hours of battery life, they are ideal for everyday use.",
       category: "mobile-accessories",
-      price: 49.99,
+      price: 1449.99,
       discountPercentage: 8.27,
       rating: 4.17,
       stock: 49,
@@ -244,7 +244,7 @@ var mobile = {
       description:
         "The iPhone 12 Silicone Case with MagSafe in Plum is a stylish and protective case designed for the iPhone 12. It features MagSafe technology for easy attachment of accessories.",
       category: "mobile-accessories",
-      price: 29.99,
+      price: 1229.99,
       discountPercentage: 14.35,
       rating: 4.41,
       stock: 51,
@@ -306,7 +306,7 @@ var mobile = {
       description:
         "The Selfie Lamp with iPhone is a portable and adjustable LED light designed to enhance your selfies and video calls. Attach it to your iPhone for well-lit photos.",
       category: "mobile-accessories",
-      price: 14.99,
+      price: 2499.99,
       discountPercentage: 13.86,
       rating: 2.84,
       stock: 89,
@@ -366,7 +366,7 @@ var mobile = {
       description:
         "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
       category: "smartphones",
-      price: 899.99,
+      price: 67999.99,
       discountPercentage: 14.19,
       rating: 4.96,
       stock: 99,
@@ -428,7 +428,7 @@ var mobile = {
       description:
         "The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.",
       category: "smartphones",
-      price: 299.99,
+      price: 22299.99,
       discountPercentage: 2.39,
       rating: 4.42,
       stock: 87,
@@ -489,7 +489,7 @@ var mobile = {
       description:
         "The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.",
       category: "smartphones",
-      price: 349.99,
+      price: 22349.99,
       discountPercentage: 3.03,
       rating: 4.14,
       stock: 53,
@@ -554,48 +554,50 @@ var mobile = {
 
 // --------------------------------------Normal-----------------------------------------------
 
-    mobile.products.map((e) => {
-      let boxMiddle = document.createElement("div");
-      boxMiddle.className = "boxMiddle";
-      let title = document.createElement("span");
-      title.innerHTML = e.title;
-      title.className = "ProductTitle";
-      let description = document.createElement("span");
-      description.innerHTML = e.description;
-      let price = document.createElement("span");
-      price.innerHTML = " Actual Price " + e.price;
-      price.className = "actualPrice";
-      let discountPercentage = document.createElement("span");
-      discountPercentage = " Discounted Price " + e.discountPercentage;
-      let width = document.createElement("span");
-      width.innerHTML = "Width " + e.dimensions.width;
-      let height = document.createElement("span");
-      height.innerHTML = "Height " + e.dimensions.height;
-      let depth = document.createElement("span");
-      width.innerHTML = "Depth " + e.dimensions.depth;
-      boxMiddle.append(
-        title,
-        price,
-        discountPercentage,
-        width,
-        height,
-        depth,
-        description
-      );
-      let boxLeft = document.createElement("div");
-      boxLeft.className = "boxLeft";
-      let mobileImage = document.createElement("img");
-      mobileImage.src = e.thumbnail;
-      mobileImage.className = "mobileImage";
-      boxLeft.append(mobileImage);
-      let mainContainer = document.createElement("div");
-      mainContainer.className = "mainContainer";
-      mainContainer.append(boxLeft, boxMiddle);
-      document.getElementById("collection").append(mainContainer);
-    });
-  
-  
+mobile.products.map((e) => {
+  let boxMiddle = document.createElement("div");
+  boxMiddle.className = "boxMiddle";
 
+  let title = document.createElement("span");
+  title.innerHTML = e.title;
+  title.className = "ProductTitle";
+
+  let description = document.createElement("span");
+  description.innerHTML = e.description;
+
+  let price = document.createElement("span");
+  price.innerHTML = " Actual Price " + e.price;
+  price.className = "actualPrice";
+
+  let discountPercentage = document.createElement("span");
+  discountPercentage = " Discounted Percentage " + e.discountPercentage;
+
+  let rating = document.createElement("span");
+  rating.innerHTML = "Rating " + e.rating;
+
+  let width = document.createElement("span");
+  width.innerHTML = "Width " + e.dimensions.width;
+
+  let height = document.createElement("span");
+  height.innerHTML = "Height " + e.dimensions.height;
+
+  let depth = document.createElement("span");
+  width.innerHTML = "Depth " + e.dimensions.depth;
+
+  boxMiddle.append(title,price,discountPercentage,rating,width,height,depth,description);
+
+  let boxLeft = document.createElement("div");
+  boxLeft.className = "boxLeft";
+  let mobileImage = document.createElement("img");
+  mobileImage.src = e.thumbnail;
+  mobileImage.className = "mobileImage";
+  boxLeft.append(mobileImage);
+
+  let mainContainer = document.createElement("div");
+  mainContainer.className = "mainContainer";
+  mainContainer.append(boxLeft, boxMiddle);
+  document.getElementById("collection").append(mainContainer);
+});
 
 // ----------------------------------Low To High-------------------------------------------------
 function lowToHigh() {
@@ -606,37 +608,53 @@ function lowToHigh() {
   mobile.products.map((e) => {
     let boxMiddle = document.createElement("div");
     boxMiddle.className = "boxMiddle";
+
     let title = document.createElement("span");
     title.innerHTML = e.title;
     title.className = "ProductTitle";
+
     let description = document.createElement("span");
     description.innerHTML = e.description;
+
     let price = document.createElement("span");
     price.innerHTML = " Actual Price " + e.price;
     price.className = "actualPrice";
+
     let discountPercentage = document.createElement("span");
-    discountPercentage = " Discounted Price " + e.discountPercentage;
+    discountPercentage = " Discounted Percentage " + e.discountPercentage;
+
+    let rating = document.createElement("span");
+    rating.innerHTML = "Rating " + e.rating;
+
     let width = document.createElement("span");
     width.innerHTML = "Width " + e.dimensions.width;
+
     let height = document.createElement("span");
     height.innerHTML = "Height " + e.dimensions.height;
+
     let depth = document.createElement("span");
     width.innerHTML = "Depth " + e.dimensions.depth;
+
     boxMiddle.append(
       title,
       price,
       discountPercentage,
+      rating,
       width,
       height,
       depth,
       description
     );
+
     let boxLeft = document.createElement("div");
     boxLeft.className = "boxLeft";
+    
     let mobileImage = document.createElement("img");
     mobileImage.src = e.thumbnail;
     mobileImage.className = "mobileImage";
+
     boxLeft.append(mobileImage);
+
     let mainContainer = document.createElement("div");
     mainContainer.className = "mainContainer";
     mainContainer.append(boxLeft, boxMiddle);
@@ -644,50 +662,66 @@ function lowToHigh() {
   });
 }
 
-
 // --------------------------------High To Low---------------------------------------
-function highToLow(){
-    document.getElementById("collection").innerHTML = "";
-    mobile.products.sort((a, b) => {
-      return b.price - a.price;
-    });
-    mobile.products.map((e) => {
-      let boxMiddle = document.createElement("div");
-      boxMiddle.className = "boxMiddle";
-      let title = document.createElement("span");
-      title.innerHTML = e.title;
-      title.className = "ProductTitle";
-      let description = document.createElement("span");
-      description.innerHTML = e.description;
-      let price = document.createElement("span");
-      price.innerHTML = " Actual Price " + e.price;
-      price.className = "actualPrice";
-      let discountPercentage = document.createElement("span");
-      discountPercentage = " Discounted Price " + e.discountPercentage;
-      let width = document.createElement("span");
-      width.innerHTML = "Width " + e.dimensions.width;
-      let height = document.createElement("span");
-      height.innerHTML = "Height " + e.dimensions.height;
-      let depth = document.createElement("span");
-      width.innerHTML = "Depth " + e.dimensions.depth;
-      boxMiddle.append(
-        title,
-        price,
-        discountPercentage,
-        width,
-        height,
-        depth,
-        description
-      );
-      let boxLeft = document.createElement("div");
-      boxLeft.className = "boxLeft";
-      let mobileImage = document.createElement("img");
-      mobileImage.src = e.thumbnail;
-      mobileImage.className = "mobileImage";
-      boxLeft.append(mobileImage);
-      let mainContainer = document.createElement("div");
-      mainContainer.className = "mainContainer";
-      mainContainer.append(boxLeft, boxMiddle);
-      document.getElementById("collection").append(mainContainer);
-    });
-  }
+function highToLow() {
+  document.getElementById("collection").innerHTML = "";
+  mobile.products.sort((a, b) => {
+    return b.price - a.price;
+  });
+
+  mobile.products.map((e) => {
+    let boxMiddle = document.createElement("div");
+    boxMiddle.className = "boxMiddle";
+
+    let title = document.createElement("span");
+    title.innerHTML = e.title;
+    title.className = "ProductTitle";
+
+    let description = document.createElement("span");
+    description.innerHTML = e.description;
+
+    let price = document.createElement("span");
+    price.innerHTML = " Actual Price " + e.price;
+    price.className = "actualPrice";
+
+    let discountPercentage = document.createElement("span");
+    discountPercentage = " Discounted Percentage " + e.discountPercentage;
+
+    let rating = document.createElement("span");
+    rating.innerHTML = "Rating " + e.rating;
+
+    let width = document.createElement("span");
+    width.innerHTML = "Width " + e.dimensions.width;
+
+    let height = document.createElement("span");
+    height.innerHTML = "Height " + e.dimensions.height;
+
+    let depth = document.createElement("span");
+    width.innerHTML = "Depth " + e.dimensions.depth;
+
+    boxMiddle.append(
+      title,
+      price,
+      discountPercentage,
+      rating,
+      width,
+      height,
+      depth,
+      description
+    );
+
+    let boxLeft = document.createElement("div");
+    boxLeft.className = "boxLeft";
+
+    let mobileImage = document.createElement("img");
+    mobileImage.src = e.thumbnail;
+    mobileImage.className = "mobileImage";
+    boxLeft.append(mobileImage);
+
+    let mainContainer = document.createElement("div");
+    mainContainer.className = "mainContainer";
+    mainContainer.append(boxLeft, boxMiddle);
+    
+    document.getElementById("collection").append(mainContainer);
+  });
+}

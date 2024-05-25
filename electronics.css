@@ -7,15 +7,54 @@ body{
     justify-content: space-around;
 }
 
+/* ....................Left Filter Side---------------------------- */
 #left{
     width: 25vw;
-    background-color: red;
+    /* background-color: red; */
+    margin: 10px 10px;
+    background-color: white;
+
 }
 
-/* #right{
-    width: 73vw;
+#filterLeft{
+    margin: 15px 0px 0px 10px;
+    color: rgb(33,33,97);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#categoriesFilterLeft{
+    margin: 0px 10px;
+}
+
+.categoriesFilterLeftProducts{
+    margin: 15px 15px;
+}
+
+[class="categoriesFilterLeftProductsLists"]{
+    /* color: red; */
+    margin:15px 5px;
+}
+
+#ratingHeading{
+    margin: 15px 15px;
+}
+
+.form{
+    /* color: red; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    margin: 0px 140px 0px 0px;
+
+}
+
+/* ---------------------------------------------Right Product Side-------------------------------- */
+ #right{
+    background-color: white;
+    margin: 10px 0px;
    
-} */
+} 
 
 .filters{
     margin: 0px 10px;
