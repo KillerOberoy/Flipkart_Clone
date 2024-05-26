@@ -62,6 +62,12 @@ else if(e.tittle=="Electronics"){
     link.append(image);
     box.append(link);
 }
+else if(e.tittle=="Mobile"){
+    var link=document.createElement("a");
+    link.href="mobile.html";
+    link.append(image);
+    box.append(link);
+}
 else{
     box.append(image);
 }

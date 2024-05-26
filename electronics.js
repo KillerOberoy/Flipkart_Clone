@@ -553,59 +553,8 @@ var mobile = {
 // -----------------------------------Append---------------------------------------------------
 
 // --------------------------------------Normal-----------------------------------------------
-
-mobile.products.map((e) => {
-  let boxMiddle = document.createElement("div");
-  boxMiddle.className = "boxMiddle";
-
-  let title = document.createElement("span");
-  title.innerHTML = e.title;
-  title.className = "ProductTitle";
-
-  let description = document.createElement("span");
-  description.innerHTML = e.description;
-
-  let price = document.createElement("span");
-  price.innerHTML = " Actual Price " + e.price;
-  price.className = "actualPrice";
-
-  let discountPercentage = document.createElement("span");
-  discountPercentage = " Discounted Percentage " + e.discountPercentage;
-
-  let rating = document.createElement("span");
-  rating.innerHTML = "Rating " + e.rating;
-
-  let width = document.createElement("span");
-  width.innerHTML = "Width " + e.dimensions.width;
-
-  let height = document.createElement("span");
-  height.innerHTML = "Height " + e.dimensions.height;
-
-  let depth = document.createElement("span");
-  width.innerHTML = "Depth " + e.dimensions.depth;
-
-  boxMiddle.append(title,price,discountPercentage,rating,width,height,depth,description);
-
-  let boxLeft = document.createElement("div");
-  boxLeft.className = "boxLeft";
-  let mobileImage = document.createElement("img");
-  mobileImage.src = e.thumbnail;
-  mobileImage.className = "mobileImage";
-  boxLeft.append(mobileImage);
-
-  let mainContainer = document.createElement("div");
-  mainContainer.className = "mainContainer";
-  mainContainer.append(boxLeft, boxMiddle);
-  document.getElementById("collection").append(mainContainer);
-});
-
-// ----------------------------------Low To High-------------------------------------------------
-function lowToHigh() {
-  document.getElementById("collection").innerHTML = "";
-  mobile.products.sort((a, b) => {
-    return a.price - b.price;
-  });
-  mobile.products.map((e) => {
+function dynamicAddedProducts(products) {
+    products.map((e) => {
     let boxMiddle = document.createElement("div");
     boxMiddle.className = "boxMiddle";
 
@@ -621,7 +570,7 @@ function lowToHigh() {
     price.className = "actualPrice";
 
     let discountPercentage = document.createElement("span");
-    discountPercentage = " Discounted Percentage " + e.discountPercentage;
+    discountPercentage.innerHTML = " Discounted Percentage " + e.discountPercentage;
 
     let rating = document.createElement("span");
     rating.innerHTML = "Rating " + e.rating;
@@ -633,7 +582,7 @@ function lowToHigh() {
     height.innerHTML = "Height " + e.dimensions.height;
 
     let depth = document.createElement("span");
-    width.innerHTML = "Depth " + e.dimensions.depth;
+    depth.innerHTML = "Depth " + e.dimensions.depth;
 
     boxMiddle.append(
       title,
@@ -648,11 +597,9 @@ function lowToHigh() {
 
     let boxLeft = document.createElement("div");
     boxLeft.className = "boxLeft";
-    
     let mobileImage = document.createElement("img");
     mobileImage.src = e.thumbnail;
     mobileImage.className = "mobileImage";
-
     boxLeft.append(mobileImage);
 
     let mainContainer = document.createElement("div");
@@ -660,6 +607,15 @@ function lowToHigh() {
     mainContainer.append(boxLeft, boxMiddle);
     document.getElementById("collection").append(mainContainer);
   });
+}
+dynamicAddedProducts(mobile.products);
+// ----------------------------------Low To High-------------------------------------------------
+function lowToHigh() {
+  document.getElementById("collection").innerHTML = "";
+  mobile.products.sort((a, b) => {
+    return a.price - b.price;
+  });
+  dynamicAddedProducts(mobile.products);
 }
 
 // --------------------------------High To Low---------------------------------------
@@ -669,59 +625,43 @@ function highToLow() {
     return b.price - a.price;
   });
 
-  mobile.products.map((e) => {
-    let boxMiddle = document.createElement("div");
-    boxMiddle.className = "boxMiddle";
-
-    let title = document.createElement("span");
-    title.innerHTML = e.title;
-    title.className = "ProductTitle";
-
-    let description = document.createElement("span");
-    description.innerHTML = e.description;
-
-    let price = document.createElement("span");
-    price.innerHTML = " Actual Price " + e.price;
-    price.className = "actualPrice";
-
-    let discountPercentage = document.createElement("span");
-    discountPercentage = " Discounted Percentage " + e.discountPercentage;
-
-    let rating = document.createElement("span");
-    rating.innerHTML = "Rating " + e.rating;
-
-    let width = document.createElement("span");
-    width.innerHTML = "Width " + e.dimensions.width;
-
-    let height = document.createElement("span");
-    height.innerHTML = "Height " + e.dimensions.height;
-
-    let depth = document.createElement("span");
-    width.innerHTML = "Depth " + e.dimensions.depth;
-
-    boxMiddle.append(
-      title,
-      price,
-      discountPercentage,
-      rating,
-      width,
-      height,
-      depth,
-      description
-    );
-
-    let boxLeft = document.createElement("div");
-    boxLeft.className = "boxLeft";
-
-    let mobileImage = document.createElement("img");
-    mobileImage.src = e.thumbnail;
-    mobileImage.className = "mobileImage";
-    boxLeft.append(mobileImage);
-
-    let mainContainer = document.createElement("div");
-    mainContainer.className = "mainContainer";
-    mainContainer.append(boxLeft, boxMiddle);
-    
-    document.getElementById("collection").append(mainContainer);
-  });
+  dynamicAddedProducts(mobile.products);
 }
+
+//   ----------------------------Rating Filter-------------------------------
+function rating4() {
+  var filteredElectronics = mobile.products.filter((e) => {
+    return e.rating >= 4;
+  });
+  console.log(filteredElectronics);
+  document.getElementById("collection").innerHTML = "";
+  dynamicAddedProducts(filteredElectronics);
+}
+
+function rating3() {
+    var filteredElectronics = mobile.products.filter((e) => {
+      return e.rating >= 3;
+    });
+    console.log(filteredElectronics);
+    document.getElementById("collection").innerHTML = "";
+    dynamicAddedProducts(filteredElectronics);
+  }
+  
+  function rating2() {
+    var filteredElectronics = mobile.products.filter((e) => {
+      return e.rating >= 2;
+    });
+    console.log(filteredElectronics);
+    document.getElementById("collection").innerHTML = "";
+    dynamicAddedProducts(filteredElectronics);
+  }
+  
+  function ratin1() {
+    var filteredElectronics = mobile.products.filter((e) => {
+      return e.rating >= 1;
+    });
+    console.log(filteredElectronics);
+    document.getElementById("collection").innerHTML = "";
+    dynamicAddedProducts(filteredElectronics);
+  }
+  
