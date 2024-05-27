@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="utility.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="electronics.css"> -->
-  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="cart.css">
 </head>
 <body>
     <nav>
@@ -42,7 +42,7 @@
             </div>
             <div id="cart" class="align">
                 <span id="cartLogo">
-                    <a href="cart.html"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart Logo"></a>
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart Logo">
                 </span>
 
                 <span id="cartData" class="sizeFont">
@@ -76,66 +76,15 @@
 
    
 
-    <!-----------------------Mobile Section Page-------------------------->
+    <!-----------------------Cart Section Page-------------------------->
 
-    <section id="products">
-         <div id="left">
-           
-                <div id="filterLeft">FILTERS
-                    <span style="font-size: 14px; cursor: pointer;" onclick="clearFilter()" >CLEAR FILTER</span>
-                </div><hr>
-
-                <div id="categoriesLeft">
-                    <div id="categoriesFilterLeft">BRANDS</div>
-                    <div class="categoriesFilterLeftProducts">
-                        <div class="categoriesFilterLeftProductsLists" onclick="samsung()">Samsung</div>
-                        <div class="categoriesFilterLeftProductsLists"onclick="apple()">Apple</div>
-                        <div class="categoriesFilterLeftProductsLists" onclick="oppo()">Oppo</div>
-                        <div class="categoriesFilterLeftProductsLists" onclick="realme()">Realme</div>
-                        <div class="categoriesFilterLeftProductsLists" onclick="vivo()">Vivo</div>
-                        
-                    </div><hr>
-                    <div class="rating">
-                        <div id="ratingHeading">CUSTOMER RATINGS</div>
-                        <div class="form">
-                            <input type="checkbox" id="four" onclick="rating4()">
-                            <label for="four">4 & above</label>
-                            <input type="checkbox" id="three" onclick="rating3()">
-                            <label for="three">3 & above</label>
-                            <input type="checkbox" id="two" onclick="rating2()">
-                            <label for="two">2 & above</label>
-                            <input type="checkbox" id="one" onclick="rating1()">
-                            <label for="one">1 & above</label>
-                        </div>
-                    </div>
-                </div>
-            
-        </div> 
-
-        <div id="right">
-            <span class="filters" >
-                Sort By 
-            </span>
-            <span class="filters">
-                Popularity
-            </span>
-            <span class="filters" style="cursor: pointer;" onclick="lowToHigh()">
-                Price--Low to High
-            </span>
-            <span class="filters" style="cursor: pointer;" onclick="highToLow()">
-                Price--High to Low
-            </span>
-            <span class="filters">
-                Newest First
-            </span><hr>
-            <div id="collection">
-                
-            </div>
-        </div>
+    <div id="cartSection">
+        
+    </div>
 
         
 
-    </section>
+   
     <!----------------------------Footer-------------------->
     <footer>
         <div>
@@ -206,10 +155,10 @@
         </div>
     </footer>
     <script src="script.js"></script> 
-     <scripts src="section.js"></scripts> 
+     <!-- <scripts src="section.js"></scripts>  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
    "></script>
- 
-  <script src="mobile.js"></script>
+   <!-- <script src="mobile.js"></script> -->
+ <script src="cart.js"></script>
 </body>
 </html>

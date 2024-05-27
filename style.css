@@ -16,6 +16,7 @@ nav{
     /* align-items: center; */
     /* justify-content: space-around; */
     background-color: white;
+    position: fixed;
 }
 
 #navBar {
@@ -82,6 +83,16 @@ nav{
 #login a{
     text-decoration: none;
     color: black;
+}
+
+/* #cartData:hover{
+    cursor: pointer;
+    color: blue;
+} */
+
+#cartLogo:hover{
+    cursor: pointer;
+    /* color: blue; */
 }
 /* ---------------------------Sections------------------------------- */
 

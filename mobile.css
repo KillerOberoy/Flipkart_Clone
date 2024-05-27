@@ -25,6 +25,10 @@ body {
   align-items: center;
 }
 
+#filterLeft span:hover{
+    color:blue ;
+}
+
 #categoriesFilterLeft {
   margin: 0px 10px;
   /* display: flex;
@@ -121,6 +125,7 @@ body {
 .leftBox {
   /* margin-left: 10px; */
   width: 25vw;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .mobileThumbnail {
